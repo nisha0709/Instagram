@@ -1,7 +1,22 @@
 .App {
   text-align: center;
 }
-
+.buttonName {
+  width: 100px;
+  color: black;
+  border: 0px;
+  margin-top: 20px;
+  margin: 5px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 5px;
+  height:"30px";
+  cursor: pointer;
+  background-color: #d9dee3;
+}
+.buttonName:hover{
+  background-color: #9fa5ab;
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -11,6 +26,24 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+/* .css-19ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 10px;
+} */
+
+/* .css-2t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: 10px;
+} */
+
+/* .css-11d3z3hw-MuiOutlinedInput-notchedOutline {
+  height: 10px;
+} */
+
+.MuiInputBase-formControl
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+ /* border: none; */
+  height: 8px;
 }
 
 .App-header {
