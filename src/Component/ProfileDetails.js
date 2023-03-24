@@ -51,8 +51,7 @@ function ProfileDetails() {
     height: "150px",
     borderRadius: "50%",
     width: "100%",
-    margin: "20px",
-    padding: "20px",
+    marginLeft:"40px",
     position: "relative",
   });
 
@@ -71,7 +70,7 @@ function ProfileDetails() {
     marginTop: "20px",
     [theme.breakpoints.down("sm")]: {
       marginTop: "40px",
-      marginLeft: "20px",
+    
     },
     [theme.breakpoints.down("md")]: {
       height: "250px",
@@ -95,6 +94,15 @@ function ProfileDetails() {
     [theme.breakpoints.down("md")]: {
       marginLeft: "40px",
     },
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "40px",
+    },
+  }));
+  const GridChildParent = styled(Grid)(({ theme }) => ({
+  width:"100%",
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: "40px",
+    },
   }));
   const GridChild=styled(Grid)({
     width:"100%",
@@ -105,7 +113,7 @@ function ProfileDetails() {
     marginTop: "24px",
     width:"33%",
     [theme.breakpoints.down("lg")]: {
-     width:"33%"
+     display:"none"
     },
   }));
   return (
@@ -116,11 +124,11 @@ function ProfileDetails() {
             <ImageTag src={userName.dataImg} />
           </BoxMain>
         </GridParent>
-        <Grid item sm={4} lg={4}>
+        <GridChildParent item sm={4} lg={4}>
           <Grid container>
             <GridItem item>
               <BoxItem>
-                <span>{userName.dataName}</span>
+                {userName.dataName}
                 <ButtonUnstyled className="buttonName">
                   Edit Profile
                 </ButtonUnstyled>
@@ -128,7 +136,7 @@ function ProfileDetails() {
                   Share Profile
                 </ButtonUnstyled>
 
-                <Grid container m={5} spacing={1} xs={12}>
+                <Grid container m={1} spacing={1} xs={12}>
                   <GridChild item xs={4}>
                     <Box>
                       <b>{userName.posts}</b> posts
@@ -149,7 +157,7 @@ function ProfileDetails() {
               </BoxItem>
             </GridItem>
           </Grid>
-        </Grid>
+        </GridChildParent>
         <Grid item>
           <BoxSwitch >
             <PopupState variant="popover" popupId="demo-popup-menu">

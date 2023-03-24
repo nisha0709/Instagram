@@ -63,12 +63,21 @@ function AllPosts() {
     
   }))
 
-  const ImageTag = styled("img")({
+  const ImageTag = styled("img")(({theme})=>({
     width: "100%",
     height: "300px",
-    
     position: "relative",
-  });
+    [theme.breakpoints.down("sm")]: {
+     height:"200px",
+     width:"100%"
+    },
+    [theme.breakpoints.down("lg")]: {
+    height:"300px"
+     },
+     [theme.breakpoints.down("md")]: {
+      height:"150px"
+       },
+  }));
   return (
    
       <Grid container spacing={3}  marginTop="0px">
